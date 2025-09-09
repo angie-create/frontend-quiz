@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Frontend quiz app</title>
+</head>
+<body data-theme="light">
+  
+  <div class="app-container">
+    <!-- Header -->
+    <header class="header">
+      <div class="current-quiz" id="currentQuiz" style="display: none;">
+        <img src="" alt="" class="quiz-icon" id="currentQuizIcon">
+        <span class="quiz-title" id="currentQuizTitle"></span>
+      </div>
+      
+      <div class="theme-toggle">
+        <img src="./assets/images/icon-sun-light.svg" alt="Light mode" class="theme-icon theme-icon-light">
+        <button class="toggle-switch" id="themeToggle" aria-label="Toggle dark mode">
+          <span class="toggle-slider"></span>
+        </button>
+        <img src="./assets/images/icon-moon-light.svg" alt="Dark mode" class="theme-icon theme-icon-dark">
+      </div>
+    </header>
+
+    <main class="main-content">
+      
+      <!-- Quiz menu screen -->
+      <section class="quiz-menu" id="quizMenu">
+        <div class="welcome-section">
+          <h1 class="welcome-title">
+            Welcome to the<br>
+            <span class="highlight">Frontend Quiz!</span>
+          </h1>
+          <p class="welcome-subtitle">Pick a subject to get started.</p>
+        </div>
+        
+        <div class="quiz-subjects" id="quizSubjects">
+          <!-- Quiz subjects will be populated by JavaScript -->
+        </div>
+      </section>
+
+      <!-- Quiz question screen -->
+      <section class="quiz-question" id="quizQuestion" style="display: none;">
+        <div class="question-section">
+          <div class="question-meta">
+            <p class="question-number" id="questionNumber">Question 1 of 10</p>
+            <div class="progress-bar">
+              <div class="progress-fill" id="progressFill"></div>
+            </div>
+          </div>
+          <h2 class="question-text" id="questionText"></h2>
+        </div>
+        
+        <div class="answer-section">
+          <form class="answer-form" id="answerForm">
+            <div class="answer-options" id="answerOptions">
+              <!-- Answer options will be populated by JavaScript -->
+            </div>
+            
+            <div class="error-message" id="errorMessage" style="display: none;">
+              <img src="./assets/images/icon-error.svg" alt="Error" class="error-icon">
+              <span>Please select an answer</span>
+            </div>
+            
+            <button type="submit" class="submit-btn" id="submitBtn">Submit Answer</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Quiz completed screen -->
+      <section class="quiz-completed" id="quizCompleted" style="display: none;">
+        <div class="completion-section">
+          <h1 class="completion-title">
+            Quiz completed<br>
+            <span class="highlight">You scored...</span>
+          </h1>
+        </div>
+        
+        <div class="score-section">
+          <div class="score-card">
+            <div class="quiz-info">
+              <img src="" alt="" class="quiz-icon" id="completedQuizIcon">
+              <span class="quiz-title" id="completedQuizTitle"></span>
+            </div>
+            <div class="final-score">
+              <span class="score-number" id="finalScore">0</span>
+              <span class="score-total">out of 10</span>
+            </div>
+          </div>
+          
+          <button class="play-again-btn" id="playAgainBtn">Play Again</button>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
